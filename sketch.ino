@@ -1,12 +1,7 @@
 #include <FastLED.h>
-#include <Buzzer.h>
-#define LED_PIN     A5
-#define NUM_LEDS    16
-Buzzer buzzer(13);
-
-
+#define LED_PIN     6
+#define NUM_LEDS    10
 CRGB leds[NUM_LEDS];
-
 int buttonstate = 0;
 int duration = 0;
 long readUltrasonicDistance(int triggerPin, int echoPin)
@@ -108,7 +103,7 @@ void start() {
     }
   }
   delay(100);
-  tone(10, 100);
+  tone(10, 1000);
   delay(1000);
   noTone(10);
 }
@@ -121,16 +116,16 @@ void completed() {
     FastLED.show();
     delay(15);
   }
-  tone(10, 600);
-  delay(100);
+  tone(10, 1000);
+  delay(200);
   noTone(10);
 
-  tone(10, 700);
-  delay(100);
+  tone(10, 1100);
+  delay(200);
   noTone(10);
 
-  tone(10, 800);
-  delay(100);
+  tone(10, 1200);
+  delay(200);
   noTone(10);
 
 
